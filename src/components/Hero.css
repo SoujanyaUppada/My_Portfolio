@@ -1,0 +1,308 @@
+.hero {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  padding-top: 80px;
+  background-color: white;  
+  color:white;
+  position: relative;
+  overflow: hidden;
+}
+
+/* Dark mode Hero section */
+.dark .hero {
+  background: black;
+  position: relative;
+}
+
+.dark .hero::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: radial-gradient(circle at 20% 80%, rgba(168, 85, 247, 0.4) 0%, transparent 50%),
+              radial-gradient(circle at 80% 20%, rgba(124, 58, 237, 0.3) 0%, transparent 50%);
+  pointer-events: none;
+}
+
+.dark .hero .container {
+  position: relative;
+  z-index: 1;
+}
+
+.dark .hero h1,
+.dark .hero h2,
+.dark .hero p {
+  color: #ffffff !important;
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+.dark .hero .hero-subtitle {
+  color: #e0e7ff !important;
+  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.3);
+}
+.dark .hero .hero-name {
+  font-size: 3.5rem;
+  font-weight: 700;
+  margin-bottom: 0.5rem;
+  background: white;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.dark .hero .btn-primary {
+  background: linear-gradient(135deg, var(--purple-primary), var(--purple-secondary));
+  border: 1px solid var(--purple-primary);
+  color: #ffffff !important;
+  font-weight: 600;
+  box-shadow: 0 4px 15px rgba(139, 92, 246, 0.4);
+}
+
+.dark .hero .btn-primary:hover {
+  background: linear-gradient(135deg, var(--purple-secondary), var(--purple-dark));
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(139, 92, 246, 0.6);
+}
+
+.dark .hero .btn-outline {
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  color: #ffffff !important;
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(5px);
+}
+
+.dark .hero .btn-outline:hover {
+  background: rgba(255, 255, 255, 0.2);
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(255, 255, 255, 0.2);
+}
+
+.hero::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: white;
+  z-index: 1;
+}
+
+.hero .container {
+  position: relative;
+  z-index: 2;
+}
+
+.hero-content {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 4rem;
+  align-items: center;
+  min-height: 80vh;
+}
+
+.hero-text {
+  max-width: 600px;
+}
+
+.hero-greeting {
+  font-size: 1.2rem;
+  color: black;
+  margin-bottom: 0.5rem;
+  font-weight: 500;
+}
+
+.hero-name {
+  font-size: 3.5rem;
+  font-weight: 700;
+  margin-bottom: 0.5rem;
+  background: black;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.hero-title {
+  font-size: 1.8rem;
+  color:black;
+  margin-bottom: 1.5rem;
+  font-weight: 500;
+}
+
+.hero-description {
+  font-size: 1.1rem;
+  line-height: 1.7;
+  color:black;
+  margin-bottom: 2rem;
+}
+
+.hero-buttons {
+  display: flex;
+  gap: 1rem;
+  margin-bottom: 2rem;
+  flex-wrap: wrap;
+}
+
+.btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.75rem 1.5rem;
+  border-radius: 0.5rem;
+  font-weight: 600;
+  text-decoration: none;
+  transition: all 0.3s ease;
+  cursor: pointer;
+  border: none;
+  font-size: 1rem;
+}
+
+.btn-primary {
+  background-color: var(--primary-color);
+  color: white;
+}
+
+.btn-primary:hover {
+  background-color: var(--secondary-color);
+  transform: translateY(-2px);
+  box-shadow: 0 10px 25px rgba(37, 99, 235, 0.3);
+}
+
+.btn-secondary {
+  background-color: transparent;
+  color: white;
+  border: 2px solid white;
+}
+
+.btn-secondary:hover {
+  background-color: white;
+  color: var(--primary-color);
+  transform: translateY(-2px);
+}
+
+.hero-social {
+  display: flex;
+  gap: 1rem;
+}
+
+.social-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 50px;
+  height: 50px;
+  background-color: rgba(255, 255, 255, 0.1);
+  border-radius: 50%;
+  color: white;
+  text-decoration: none;
+  transition: all 0.3s ease;
+  backdrop-filter: blur(10px);
+}
+
+.social-icon:hover {
+  background-color: rgba(255, 255, 255, 0.2);
+  transform: translateY(-3px);
+}
+
+.hero-image {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.image-placeholder {
+  position: relative;
+}
+
+.profile-circle {
+  width: 300px;
+  height: 300px;
+  border-radius: 50%;
+  overflow: hidden;  /* important: clip the image into a circle */
+  border: 4px solid rgba(255, 255, 255, 0.3);
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
+
+  /* You can keep gradient background as fallback in case image doesn't load */
+  background: linear-gradient(45deg, var(--primary-color), var(--secondary-color));
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.profile-circle img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* ensures image fills circle without distortion */
+}
+
+/* Responsive design */
+@media (max-width: 1024px) {
+  .hero-content {
+    gap: 2rem;
+  }
+  
+  .hero-name {
+    font-size: 3rem;
+  }
+  
+  .profile-circle {
+    width: 250px;
+    height: 250px;
+    font-size: 3rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .hero {
+    padding-top: 60px;
+  }
+  
+  .hero-content {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+    text-align: center;
+  }
+  
+  .hero-name {
+    font-size: 2.5rem;
+  }
+  
+  .hero-title {
+    font-size: 1.5rem;
+  }
+  
+  .hero-description {
+    font-size: 1rem;
+  }
+  
+  .hero-buttons {
+    justify-content: center;
+  }
+  
+  .hero-social {
+    justify-content: center;
+  }
+  
+  .profile-circle {
+    width: 200px;
+    height: 200px;
+    font-size: 2.5rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .hero-buttons {
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .btn {
+    width: 100%;
+    max-width: 250px;
+    justify-content: center;
+  }
+}
