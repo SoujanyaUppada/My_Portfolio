@@ -2,6 +2,7 @@ import React from 'react'
 import { motion } from 'framer-motion'
 import { Download, Mail, Github, Linkedin } from 'lucide-react'
 import './Hero.css'
+import resume from "../assests/Soujanya_Uppada_Resume.pdf";
 
 const Hero = () => {
 
@@ -79,7 +80,7 @@ const Hero = () => {
               transition={{ delay: 1, duration: 0.8 }}
             >
               <a
-                href="../assests/Soujanya_Uppada_Resume.pdf"
+                href={resume}
                 className="btn btn-primary"
                 download="Soujanya_Uppada_Resume.pdf"
               >
