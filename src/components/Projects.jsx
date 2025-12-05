@@ -1,6 +1,6 @@
 import React from 'react'
 import { motion } from 'framer-motion'
-import { ExternalLink, Github, Cloud, Zap, Users, Database } from 'lucide-react'
+import { Github, Cloud, Zap, Users } from 'lucide-react'
 import './Projects.css'
 
 const Projects = () => {
@@ -138,15 +138,6 @@ const Projects = () => {
                 </div>
 
                 <div className="project-actions">
-                  <a
-                    href={project.demoUrl}
-                    className="btn btn-primary"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                  >
-                    <ExternalLink size={18} />
-                    View Project
-                  </a>
                   <a
                     href={project.githubUrl}
                     className="btn btn-secondary"
