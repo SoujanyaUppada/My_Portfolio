@@ -79,7 +79,7 @@ const Hero = () => {
               transition={{ delay: 1, duration: 0.8 }}
             >
               <a
-                href="/resume.pdf"
+                href="../assests/Soujanya_Uppada_Resume.pdf"
                 className="btn btn-primary"
                 download="Soujanya_Uppada_Resume.pdf"
               >
